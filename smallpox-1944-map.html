@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Smallpox Incidence, 1928</title>
+	<title>Smallpox Incidence, 1944</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
 	};
 
 	info.update = function (props) {
-		this._div.innerHTML = '<h4>Smallpox Incidence, 1928&ndash;1935</h4>' + 
+		this._div.innerHTML = '<h4>Smallpox Incidence, 1944&ndash;1951</h4>' + 
 		(props ? createInfoboxStateText(props) : 'Hover over a state');
 	};
 
@@ -71,7 +71,7 @@
 		});
 	}
 
-	fetch("data/smallpox_1928.geojson")
+	fetch("data/smallpox_1944.geojson")
 		.then(response => response.json())
 		.then(smallpoxData => {
 			geojson = L.geoJson(smallpoxData, {
