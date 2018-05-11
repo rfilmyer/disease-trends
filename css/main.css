@@ -1,0 +1,5 @@
+.maps iframe {
+	height: 500px;
+	width: 800px;
+	overflow: hidden;
+}

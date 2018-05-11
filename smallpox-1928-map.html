@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Choropleth Tutorial - Leaflet</title>
+	<title>Smallpox Incidence, 1928</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,6 +62,13 @@
 		return this._div;
 	};
 
+	info.update = function (props) {
+		this._div.innerHTML = '<h4>Smallpox Incidence, 1928</h4>' +  (props ?
+			'<b>' + props.NAME + '</b><br />' + 
+			formatNumber(props.cases_per_1m)
+			: 'Hover over a state');
+	};
+
 	function formatNumber(cases) {
 		if (cases || cases === 0) {
 			return(cases.toLocaleString("en-US", {maximumSignificantDigits: 3}) + 
@@ -70,13 +77,6 @@
 			return("no data");
 		}
 	}
-
-	info.update = function (props) {
-		this._div.innerHTML = '<h4>Smallpox Incidence</h4>' +  (props ?
-			'<b>' + props.NAME + '</b><br />' + 
-			formatNumber(props.cases_per_1m)
-			: 'Hover over a state');
-	};
 
 	info.addTo(map);
 
