@@ -54,3 +54,13 @@ geojson_write(smallpox_1936_geojson, geometry = "polygon", file = "data/smallpox
 geojson_write(smallpox_1944_geojson, geometry = "polygon", file = "data/smallpox_1944.geojson")
 
 geojson_write(smallpox_1952_geojson, geometry = "polygon", file = "data/smallpox_1952.geojson")
+
+
+mmr <- us_contagious_diseases %>%
+  filter(disease %in% c("Mumps", "Measles", "Rubella") & population > 0) %>%
+  group_by(disease, year) %>%
+  summarize(cases_per_100k = 100000 * sum(count) / sum(population)) %>%
+  spread(disease, cases_per_100k) %>%
+  filter(!is.na(Measles + Mumps + Rubella))
+
+write.csv(mmr, "data/mmr.csv", row.names = FALSE)
