@@ -15,35 +15,75 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<header class="container">
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">US Diseases and Vaccinations</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a href="#intro" class="nav-link">Intro</a>
+			</li>
+			<li class="nav-item">
+			 	<a href="#smallpox" class="nav-link">Smallpox
+			 	</a>
+			</li>
+			<li class="nav-item">
+				<a href="#mmr" class="nav-link">Mumps, Measles, and Rubella</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="container text-center" id="intro">
 		<h1>US Diseases and Vaccinations</h1>
-	</header>
+		<p>A hundred years ago, diseases like smallpox, polio, and measles ran rampant across America. The development and deployment of large-scale vaccination programs across the country helped banish these diseases from the United States, and in the case of smallpox, extinguish it entirely. Two of America's success stories are with the smallpox and the MMR (Mumps, Measles, and Rubella) vaccine.</p>
+	</section>
 	<section class="container">
-		<h2>Smallpox</h2>
-		<div class="maps" id="smallpox-maps">
-			<div class="row justify-content-around">
-				<div class="col-lg-6">
-					<div id="smallpox-1928-map" class="card"></div>
-				</div>
-				<div class="col-lg-6">
-					<div id="smallpox-1936-map" class="card"></div>
-				</div>
+		<header class="text-center">
+			<h2>Smallpox</h2>
+		</header>
+		<div class="row container">
+			<div class="col-md-4">
+				<img src="img/brooklyn_life_smallpox.jpg" class="img-fluid">
+				<p>Image from <a href="http://www.brooklynhistory.org/blog/2014/07/21/on-vaccinations-and-the-small-pox-epidemic-of-1894/">Brooklyn Historical Society</a>.</p>
 			</div>
-			<div class="row justify-content-around">
-				<div class="col-lg-6">
-					<div id="smallpox-1944-map" class="card"></div>
+			<div class="col-md-8">
+				<p>Christopher Columbus's 1492 expedition first brought smallpox to the New World, and it was not until 1952 that the disease was finally eradicated from the Americas. While smallpox was one of the first diseases to have a vaccine developed, with experiments occuring as early as 1796, it took over a century to substantially reduce cases in America. By the 20th century, mass vaccination campaigns had largely controlled the disease in the US, with the last endemic case occurring in 1952. <sup>[<a href="https://www.cdc.gov/smallpox/history/history.html">Source</a>]</sup></p>
+			</div>
+		</div>
+		<div class="maps card container" id="smallpox-maps">
+			<div class="card-body">
+				<h4 class="card-title">Smallpox's Decline</h4>
+				<p class="card-text">These four maps show the gradual elimination of smallpox from the US, from 1928, to the last natural smallpox outbreak in 1949, to its eradication from the US in 1952.</p>
+				<div class="row justify-content-around">
+					<div class="col-lg-6">
+						<div id="smallpox-1928-map" class="card"></div>
+					</div>
+					<div class="col-lg-6">
+						<div id="smallpox-1936-map" class="card"></div>
+					</div>
 				</div>
-				<div class="col-lg-6">
-					<div id="smallpox-1952-map" class="card"></div>
+				<div class="row justify-content-around">
+					<div class="col-lg-6">
+						<div id="smallpox-1944-map" class="card"></div>
+					</div>
+					<div class="col-lg-6">
+						<div id="smallpox-1952-map" class="card"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="container">
-		<h2>Mumps, Measles, and Rubella</h2>
-		<div class="graph">
-			<svg id="mmr-chart" width="800" height="400"></svg>
+		<header class="text-center">
+			<h2>Mumps, Measles, and Rubella</h2>
+		</header>
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Mumps, Measles, Rubella, and the MMR Vaccine</h4>
+				<p class="card-text">In early 1970s, vaccines for mumps, measles, and rubella became commercially available. Since then, the diseases have been eliminated or nearly eliminated in the US.</p>
+				<div class="graph">
+					<svg id="mmr-chart" width="800" height="400"></svg>
+				</div>
+			</div>
 		</div>
+	</section>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
